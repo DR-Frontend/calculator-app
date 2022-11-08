@@ -1,0 +1,114 @@
+:root{
+   --theme1MainBkg: hsl(222, 26%, 31%);
+   --theme1KeypadBkg: hsl(223, 31%, 20%);
+   --theme1ScreenBkg: hsl(224, 36%, 15%);
+   --theme1KeyBkgBlue: hsl(225, 21%, 49%);
+   --theme1KeyShadowBlue: hsl(224, 28%, 35%);
+   --theme1KeyBkgToggleRed: hsl(6, 63%, 50%);
+   --theme1KeyShadowRed: hsl(6, 70%, 34%);
+   --theme1KeyBkgOrange: hsl(30, 25%, 89%);
+   --theme1KeyShadowOrange: hsl(28, 16%, 65%);
+   --theme1TextBlue: hsl(221, 14%, 31%);
+   --theme1White: hsl(0, 0%, 100%);
+}
+body{
+   background-color: var(--theme1MainBkg);
+   font-size: 32px;
+   font-family: 'League Spartan', sans-serif;
+   font-weight: 700;
+}
+.attribution{
+   font-size: 11px;
+   text-align: center;
+   margin: 20px 0;
+}
+.attribution a{
+   color: hsl(228, 45%, 44%);
+}
+.wrapp{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+/* CALCULATOR */
+.calculator{
+   width: 500px;
+}
+
+
+
+/* THEMES */
+.themes{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   color: var(--theme1White);
+}
+.themes > p{
+   font-size: 1.5rem;
+}
+.themes__selector{
+   font-size: .7rem;
+}
+
+
+
+/* SCREEN */
+.screen{
+   display: flex;
+   align-items: center;
+   justify-content: end;
+   padding: 0 25px;
+   height: 115px;
+   margin: 20px 0;
+   font-size: 3rem;
+   color: var(--theme1White);
+   border-radius: 10px;
+   overflow-x: hidden;
+   background-color: var(--theme1ScreenBkg);
+}
+
+
+
+/* KEYPAD */
+.keypad{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+   padding: 30px;
+   border-radius: 10px;
+   color: var(--theme1TextBlue);
+   background-color: var(--theme1KeypadBkg);
+}
+.key{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 10px 0;
+   cursor: pointer;
+   border-radius: 10px;
+   background-color: var(--theme1KeyBkgOrange);
+   box-shadow: 0 5px 0 0 var(--theme1KeyShadowOrange);
+}
+.key.delete,
+.key.reset{
+   color: var(--theme1White);
+   background-color: var(--theme1KeyBkgBlue);
+   box-shadow: 0 5px 0 0 var(--theme1KeyShadowBlue);
+}
+.key.reset{
+   grid-column-start: 1;
+   grid-column-end: 3;
+}
+.key.result{
+   color: var(--theme1White);
+   background-color: var(--theme1KeyBkgToggleRed);
+   box-shadow: 0 5px 0 0 var(--theme1KeyShadowRed);
+   grid-column-start: 3;
+   grid-column-end: 5;
+}
